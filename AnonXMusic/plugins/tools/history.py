@@ -14,22 +14,22 @@ from AnonXMusic.utils.database import get_client
 async def sg(client: Client, message: Message):
 
     if len(message.text.split()) < 2 and not message.reply_to_message:
-        return await message.reply("**ꜱɢ ᴜꜱᴇʀɴᴀᴍᴇ/ɪᴅ/ʀᴇᴘʟʏ**")
+        return await message.reply("ꜱɢ ᴜꜱᴇʀɴᴀᴍᴇ/ɪᴅ/ʀᴇᴘʟʏ")
     if message.reply_to_message:
         args = message.reply_to_message.from_user.id
     else:
         args = message.text.split()[1:]
         if not args:
             return await message.reply(
-                "**ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴜꜱᴇʀɴᴀᴍᴇ, ɪᴅ, ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ.**"
+                "ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴜꜱᴇʀɴᴀᴍᴇ, ɪᴅ, ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ"
             )
         args = args[0]
-    lol = await message.reply("**ᴘʀᴏᴄᴇꜱꜱɪɴɢ...**")
+    lol = await message.reply("ᴘʀᴏᴄᴇꜱꜱɪɴɢ...")
     if args:
         try:
             user = await client.get_users(f"{args}")
         except Exception:
-            return await lol.edit("**ᴘʟᴇᴀꜱᴇ ꜱᴘᴇᴄɪꜰʏ ᴀ ᴠᴀʟɪᴅ ᴜꜱᴇʀ**")
+            return await lol.edit("ᴘʟᴇᴀꜱᴇ ꜱᴘᴇᴄɪꜰʏ ᴀ ᴠᴀʟɪᴅ ᴜꜱᴇʀ")
     sgbot = ["sangmata_bot", "sangmata_beta_bot"]
     sg = random.choice(sgbot)
     VIP = random.choice(assistants)
