@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup
 
 import config
 from AnonXMusic import YouTube, app
-from AnonXMusic.core.call import VIP
+from AnonXMusic.core.call import Anony
 
 # Define a dictionary to track the last message timestamp for each user
 user_last_message_time = {}
