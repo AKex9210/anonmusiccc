@@ -19,8 +19,8 @@ from AnonXMusic.utils.inline.playlist import (
     get_playlist_markup,
     warning_markup,
 )
-from VIPMUSIC.utils.pastebin import VIPBin
-from VIPMUSIC.utils.stream.stream import stream
+from AnonXMusic.utils.pastebin import VIPBin
+from AnonXMusic.utils.stream.stream import stream
 
 # Define a dictionary to track the last message timestamp for each user
 user_last_message_time = {}
@@ -28,7 +28,7 @@ user_command_count = {}
 # Define the threshold for command spamming (e.g., 20 commands within 60 seconds)
 SPAM_THRESHOLD = 2
 SPAM_WINDOW_SECONDS = 5
-from VIPMUSIC.core.mongo import mongodb
+from AnonXMusic.core.mongo import mongodb
 
 playlistdbc = mongodb.playlistclone
 playlist = []
